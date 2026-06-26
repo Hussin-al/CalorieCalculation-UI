@@ -35,9 +35,9 @@ export class App {
   calculateCalories() {
     let bmr: number;
     if (this.user.gender === 'male') {
-      bmr = (10 * this.user.weightKg) + (6.25 * this.user.heightCm) - (5 * this.user.age) + 5;
+      bmr = 88.362 + (13.397 * this.user.weightKg) + (4.799 * this.user.heightCm) - (5.677 * this.user.age);
     } else {
-      bmr = (10 * this.user.weightKg) + (6.25 * this.user.heightCm) - (5 * this.user.age) - 161;
+      bmr = 447.593 + (9.247 * this.user.weightKg) + (3.098 * this.user.heightCm) - (4.330 * this.user.age) - 161;
     }
     this.result = Math.round(bmr * Number(this.user.activityLevel));
     this.calculated = true;
